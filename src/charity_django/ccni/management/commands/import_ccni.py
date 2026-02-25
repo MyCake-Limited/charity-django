@@ -25,7 +25,7 @@ class Command(BaseCommand):
     help = "Import CCNI data from a zip file"
     page_size = 10_000
 
-    base_url = "https://www.charitycommissionni.org.uk/umbraco/api/charityApi/ExportSearchResultsToCsv/?include=Linked&include=Removed"
+    base_url = "https://www.charitycommissionni.org.uk/api/charity-search/exportSearchResultsToCsv/?homePageId=c0884e5e-b621-4563-a378-2b313e15c74a&pageNumber=1&sortOption=Rank%3Basc&searchText="
 
     def _get_db(self):
         return router.db_for_write(Charity)
